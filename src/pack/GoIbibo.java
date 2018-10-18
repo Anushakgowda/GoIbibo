@@ -20,6 +20,7 @@ public class GoIbibo {
        /* DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");  
         String formatDateTime = now.format(format);  */
         //System.out.println("After Formatting: " + formatDateTime);
+        
         int day1 = now.getDayOfMonth();
         int day2=0;
         int day=0;
@@ -27,7 +28,7 @@ public class GoIbibo {
 		String mon = mon1.toString();
 		System.out.println(mon);
 		if(mon.equals("APRIL")||mon.equals("JUNE")||mon.equals("SEPTEMBER")||mon.equals("NOVEMBER"))
-		{
+		{ //mod is used to calculate the data 
 			day=day1;
 		day2=(day1+50)%30;
 		}
