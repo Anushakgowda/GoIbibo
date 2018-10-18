@@ -12,5 +12,6 @@ public class TestDate extends BaseTest{
 	void TestDates() {
 	LoginPage login = new LoginPage(driver);
 	login.setDepartDate();
+	
 	}
 }
