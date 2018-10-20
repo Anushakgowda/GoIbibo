@@ -1,5 +1,6 @@
 package pack;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.Month;
 import java.time.format.DateTimeFormatter;
@@ -20,7 +21,8 @@ public class GoIbibo {
        /* DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");  
         String formatDateTime = now.format(format);  */
         //System.out.println("After Formatting: " + formatDateTime);
-        
+        LocalDate time = LocalDate.now();
+        System.out.println(time);
         int day1 = now.getDayOfMonth();
         int day2=0;
         int day=0;
