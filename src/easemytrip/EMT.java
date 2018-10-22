@@ -1,6 +1,5 @@
 package easemytrip;
 
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -9,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.Assert;
 
 public class EMT {
 	static {
@@ -35,17 +33,18 @@ public class EMT {
 		WebElement at = driver.findElement(By.xpath("(//span[contains(@class,'ui-slider')])[6]"));
 		Thread.sleep(6000);
 		Actions action=new Actions(driver);
-	action.clickAndHold(lp).moveByOffset(50,0).release().perform();
-	action.clickAndHold(hp).moveByOffset(-20,0).release().perform();
-	String r = driver.findElement(By.xpath("(//span[contains(@class,'ui-slider')])[2]")).getText();
-	String range = driver.findElement(By.id("amount")).getText();
-	action.clickAndHold(dt).moveByOffset(80,0).release().perform();
-	action.clickAndHold(at).moveByOffset(-40,0).release().perform();
-	driver.findElements(By.xpath("//button[contains(text(),'Book')]")).get(2).click();
-	String s = driver.findElement(By.xpath("(//span[contains(@ng-bind,'total')])[7]")).getText().replaceAll(",","");
-	System.out.println(s);
-	int price=Integer.parseInt(s);
-System.out.println(r);	
+		action.clickAndHold(lp).moveByOffset(50,0).release().perform();
+		action.clickAndHold(hp).moveByOffset(-20,0).release().perform();
+		String r = driver.findElement(By.xpath("(//span[contains(@class,'ui-slider')])[2]")).getText();
+		String range = driver.findElement(By.id("amount")).getText();
+		action.clickAndHold(dt).moveByOffset(80,0).release().perform();
+		action.clickAndHold(at).moveByOffset(-40,0).release().perform();
+		driver.findElements(By.xpath("//button[contains(text(),'Book')]")).get(2).click();
+		String s = driver.findElement(By.xpath("(//span[contains(@ng-bind,'total')])[7]")).getText().replaceAll(",","");
+		System.out.println(s);
+		int price=Integer.parseInt(s);
+		System.out.println(r);	
+		driver.close();
 	}
 
 }
