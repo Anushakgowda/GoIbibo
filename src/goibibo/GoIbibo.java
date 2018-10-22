@@ -1,4 +1,4 @@
-package pack;
+package goibibo;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -30,7 +30,7 @@ public class GoIbibo {
 		String mon = mon1.toString();
 		System.out.println(mon);
 		if(mon.equals("APRIL")||mon.equals("JUNE")||mon.equals("SEPTEMBER")||mon.equals("NOVEMBER"))
-		{ //mod is used to calculate the data 
+		{ //mod is used to calculate the date
 			day=day1;
 		day2=(day1+50)%30;
 		}
