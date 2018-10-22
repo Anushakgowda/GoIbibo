@@ -21,14 +21,11 @@ public class CraftsVilla {
 		driver.get("https://www.craftsvilla.com/");
 		driver.findElement(By.xpath("//a[.='SAREES']")).click();
 		driver.findElement(By.xpath("//label[@title='1000-2000']")).click();
-//		String priceRange = range.getAttribute("title");
-//		System.out.println(priceRange);
-//		range.click();
 		driver.findElement(By.xpath("(//img[@class='product-image lazy'])[3]")).click();
 		String price = driver.findElement(By.xpath("//span[@class='pdp-offer-price']")).getText();
-		price.replace(" ", "").replaceAll("", "");
-		System.out.println(price);
-		int actualPrice=Integer.parseInt(price);
+		String price1 = price.substring(2);
+		System.out.println(price1);
+		int actualPrice=Integer.parseInt(price1);
 		try
 		{
 			Assert.assertTrue(actualPrice>=1000 && actualPrice<=2000,"Price is not within the range...");
