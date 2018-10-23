@@ -39,5 +39,6 @@ public class ClubFactory {
 		for(String str : names)
 		System.out.println(str);
 		driver.close();
+		
 	}
 }
